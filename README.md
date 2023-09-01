@@ -58,6 +58,7 @@ Please read this guide to understand how Selenium Xpath works https://www.guru99
 - pip install python-dotenv
 - pip install selenium
 - pip install tqdm
+- pip install schedule
 
 <!-- USAGE EXAMPLES -->
 ## Usage
