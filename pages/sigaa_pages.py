@@ -36,6 +36,9 @@ def login_into_sigaa_env(driver, env_var):
     click_submit_button(driver)
 
 def accept_cookies(driver):
-    wait = WebDriverWait(driver, 10)
+    wait = WebDriverWait(driver, 10, poll_frequency=1, ignored_exceptions=[
+        EC.element_to_be_clickable((By.XPATH, COOKIES_BUTTON))
+    ]
+    )
     button_ciente = wait.until(EC.visibility_of_element_located((By.XPATH, COOKIES_BUTTON)))
     button_ciente.click()
