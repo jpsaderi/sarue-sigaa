@@ -40,5 +40,6 @@ def accept_cookies(driver):
         EC.element_to_be_clickable((By.XPATH, COOKIES_BUTTON))
     ]
     )
-    button_ciente = wait.until(EC.visibility_of_element_located((By.XPATH, COOKIES_BUTTON)))
-    button_ciente.click()
+    wait.until(EC.element_to_be_clickable((By.XPATH, COOKIES_BUTTON)))
+    driver.find_element(By.XPATH, COOKIES_BUTTON).click()
+    
